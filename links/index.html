@@ -293,6 +293,37 @@
 
 
 
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"CBzN09OCTBZokluzIggEoM45-gzGzoHsz","appKey":"T3YK3gy7vkW2POQMWpGEj51n","placeholder":"留言仅限讨论，禁止广告等行为","serverURLs":"https://cbzn09oc.lc-cn-n1-shared.com"},
+          {
+            el: "#valine",
+            path: 
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
 
               </div>
             </div>
